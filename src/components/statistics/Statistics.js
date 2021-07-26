@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 import { StatisticsStyled } from "./StatisticsStyled";
 
 const Statistics = ({ good, neutral, bad, countTotalFeedback, countPositiveFeedbackPercentage }) => {
@@ -13,6 +14,14 @@ const Statistics = ({ good, neutral, bad, countTotalFeedback, countPositiveFeedb
       </ul>
     </StatisticsStyled>
   );
+};
+
+Statistics.propTypes = {
+  good: PropTypes.number.isRequired,
+  neutral: PropTypes.number.isRequired,
+  bad: PropTypes.number.isRequired,
+  countTotalFeedback: PropTypes.func.isRequired,
+  countPositiveFeedbackPercentage: PropTypes.func.isRequired,
 };
 
 export default Statistics;
