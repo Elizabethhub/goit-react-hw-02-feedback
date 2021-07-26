@@ -1,14 +1,15 @@
 import React from "react";
+import { FeedbackOptionsStyled } from "./FeedbackOptionsStyled";
 
 const FeedbackOptions = ({ leaveFeedback, options }) => {
   return (
-    <div>
+    <FeedbackOptionsStyled>
       {options.map((option) => (
-        <button type="button" name={option} onClick={leaveFeedback}>
+        <button type="button" className="btnAdd" name={option} onClick={leaveFeedback}>
           {option.toUpperCase()}
         </button>
       ))}
-    </div>
+    </FeedbackOptionsStyled>
   );
 };
 
